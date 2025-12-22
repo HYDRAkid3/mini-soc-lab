@@ -41,4 +41,4 @@ This document describes the architecture of the Mini SOC Lab built using Wazuh.
 
 ## Architecture Diagram
 
-![SOC Architecture](architecture_diagram.png)
+![SOC Architecture](https://github.com/HYDRAkid3/mini-soc-lab/blob/main/architecture/architecture_diagram.png)
