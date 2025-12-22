@@ -49,3 +49,11 @@ and subsequent successful authentication activity.
     "ip": "10.0.0.226"
   }
 }
+```
+
+---
+
+## 📸 Evidence
+### Wazuh SSH Authentication Events
+![Wazuh SSH Authentication Events](https://raw.githubusercontent.com/HYDRAkid3/mini-soc-lab/main/screenshots/wazuh_ssh_failed_events.png)
+
