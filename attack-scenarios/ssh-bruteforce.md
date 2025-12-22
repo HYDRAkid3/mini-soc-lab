@@ -1,109 +1,89 @@
-SSH Brute Force Attack Simulation
-📌 Overview
+# 🔐 SSH Brute Force Attack – Simulation
 
+## 📌 Overview
 This lab simulates an SSH brute force attack from a Kali Linux attacker machine against a monitored Ubuntu endpoint.
-The purpose of this exercise is to generate authentication failure and success events and validate Wazuh detection and alerting within a controlled environment.
+The objective is to generate authentication failure and success events and validate detection and alerting in **Wazuh** within a controlled SOC lab environment.
 
-⚠️ Disclaimer:
-This simulation was conducted in an isolated lab environment for educational and defensive security purposes only.
+> ⚠️ Disclaimer  
+> This activity was performed in an isolated lab environment for educational and defensive security purposes only.
 
-🎯 Objective
+---
 
-Simulate an SSH brute force attack
+## 🎯 Objective
+- Simulate an SSH brute force attack
+- Generate multiple failed authentication attempts
+- Achieve a successful SSH login
+- Validate SOC detections and MITRE ATT&CK mapping in Wazuh
 
-Generate multiple failed authentication attempts
+---
 
-Achieve a successful login
+## 🛠️ Tools Used
+- Kali Linux
+- THC-Hydra
+- Nmap
+- OpenSSH
+- Wazuh (Agent, Manager, Dashboard)
 
-Validate Wazuh alerts and MITRE ATT&CK mapping
+---
 
-🛠️ Tools Used
-
-Kali Linux
-
-THC-Hydra
-
-Nmap
-
-OpenSSH
-
-Wazuh (Monitoring & Detection)
-
-🧠 Attack Scenario
-
+## 🧠 Attack Scenario
 The attacker performed a credential brute force attack against the SSH service running on the Ubuntu endpoint.
-The attack resulted in:
+The attack resulted in multiple failed authentication attempts followed by a successful login.
+All activity was logged and detected by Wazuh.
 
-Multiple failed SSH authentication attempts
+---
 
-One successful SSH login
+## 👨‍💻 Attacker Details
+- Machine: Kali Linux VM
+- IP Address: 10.0.0.226
 
-Corresponding security alerts generated on the Wazuh manager
+---
 
-👨‍💻 Attacker Details
+## 🎯 Target Details
+- Machine: Ubuntu Endpoint VM
+- IP Address: 10.0.0.95
+- Service: SSH
+- Port: 22
 
-Machine: Kali Linux VM
+---
 
-IP Address: 10.0.0.226
+## 🔍 Reconnaissance & Attack Execution (Terminal Evidence)
 
-🎯 Target Details
-
-Machine: Ubuntu Endpoint VM
-
-IP Address: 10.0.0.95
-
-Service: SSH
-
-Port: 22
-
-🔍 Reconnaissance
-
-The SSH service was identified using Nmap:
-
+```bash
+# Nmap scan to identify SSH service
 nmap -p 22 10.0.0.95
 
+PORT   STATE SERVICE
+22/tcp open  ssh
 
-Result:
-
-SSH service discovered running on port 22
-
-🚀 Brute Force Execution
-
-A credential brute force attack was launched using THC-Hydra:
-
+# SSH brute force attack using THC-Hydra
 hydra -l ubuntu -P passwords.txt ssh://10.0.0.95
 
-Outcome
-
-Multiple failed authentication attempts detected
-
-One successful SSH login
-
-Events forwarded and logged by Wazuh
-
+[22][ssh] host: 10.0.0.95  login: ubuntu  password: ********
+1 of 1 target successfully completed, valid password found
 📊 Detection & Logging
-
-Failed and successful SSH login attempts were captured by the Ubuntu endpoint
+Failed and successful SSH login attempts were logged on the Ubuntu endpoint
 
 Logs were forwarded to the Wazuh manager
 
-Alerts were generated correlating with brute force behavior
+Alerts were correlated and displayed in the Wazuh dashboard under Threat Hunting → Events
 
 🧩 MITRE ATT&CK Mapping
-
-T1110 – Brute Force
+Technique ID	Name
+T1110	Brute Force
 
 📸 Evidence
+Screenshots captured during the lab execution:
 
-Screenshots from the lab execution:
+Nmap SSH Scan
+screenshots/nmap_scan_ubuntu.png
 
-🔎 Nmap SSH Scan
-https://github.com/HYDRAkid3/mini-soc-lab/blob/main/screenshots/nmap_scan_ubuntu.png
+Hydra Brute Force Attack
+screenshots/hydra_bruteforce.png
 
-🔐 Hydra Brute Force Attack
-https://github.com/HYDRAkid3/mini-soc-lab/blob/main/screenshots/hydra_bruteforce.png
+Wazuh SSH Authentication Failures
+screenshots/wazuh_ssh_failed_events.png
 
 ✅ Conclusion
-
-This lab successfully demonstrated how SSH brute force attacks generate detectable authentication patterns.
-Wazuh effectively identified and logged the attack activity, validating its usefulness for SOC monitoring and threat detection.
+This lab demonstrates how SSH brute force attacks generate identifiable authentication patterns.
+Wazuh successfully detected, logged, and correlated the attack activity, validating its effectiveness for SOC monitoring, threat detection, and incident investigation.
