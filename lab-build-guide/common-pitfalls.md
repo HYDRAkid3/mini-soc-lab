@@ -1,10 +1,10 @@
-# ⚠️ Common Pitfalls & Lessons Learned
+#  Common Pitfalls & Lessons Learned
 
 Almost everyone hits these issues — including experienced analysts.
 
 ---
 
-## 🔴 No Alerts Appearing
+##  No Alerts Appearing
 Common causes:
 - Agent not registered
 - Wrong log paths
@@ -17,7 +17,7 @@ Fix:
 
 ---
 
-## 🔴 SSH Attacks Not Logged
+##  SSH Attacks Not Logged
 Common causes:
 - SSH disabled
 - Wrong authentication method
@@ -29,7 +29,7 @@ Fix:
 
 ---
 
-## 🔴 Fail2Ban Interfering With Testing
+##  Fail2Ban Interfering With Testing
 Fail2Ban may:
 - Block Kali prematurely
 - Hide full attack patterns
@@ -40,7 +40,7 @@ Fix:
 
 ---
 
-## 🔴 Confusing Timelines
+##  Confusing Timelines
 Cause:
 - VM clocks out of sync
 
@@ -50,7 +50,7 @@ Fix:
 
 ---
 
-## 🧠 Key Lesson
+##  Key Lesson
 
 SOC work is messy.
 Logs are noisy.
