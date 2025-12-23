@@ -6,8 +6,6 @@ You will build the lab in this flow:
 
 Kali Attacker → Ubuntu Endpoint → Wazuh Agent → Wazuh Manager/Indexer → Dashboard Investigation
 
-This guide is written so that **a beginner can complete it successfully on the first attempt**.
-
 For commands and installation steps, always use the **official documentation links provided**.
 
 ---
