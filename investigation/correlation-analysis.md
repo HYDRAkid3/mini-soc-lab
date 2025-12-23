@@ -1,58 +1,60 @@
 # Correlation Analysis – SSH Brute Force Incident
 
 ## Why Correlation Matters
-A single `sshd: authentication failed` alert is common and often benign. However, SOC analysts must identify patterns that indicate malicious intent.
 
-This incident demonstrates how low-severity alerts combine into a high-confidence security event.
+A single `sshd: authentication failed` alert is common and often benign.  
+SOC analysts must identify **patterns**, not isolated alerts.
+
+This incident demonstrates how multiple low-to-medium severity alerts combine into a **high-confidence security incident**.
 
 ---
 
 ## Observed Alert Chain
 
-1. Multiple SSH authentication failures  
+1. **Multiple SSH authentication failures**
    - Rule: `sshd: authentication failed`
    - Severity: Medium (Level 5)
 
-2. Successful SSH login
-   - Indicates credential compromise or password guessing success.
+2. **Successful SSH login**
+   - Indicates password guessing or credential compromise
 
-3. Privileged activity detected
+3. **Privileged activity detected**
    - `Successful sudo to ROOT executed`
-   - Confirms attacker escalation.
+   - Confirms attacker escalation
 
 ---
 
 ## Correlated Incident Narrative
 
-- Initial brute force activity detected from `10.0.0.226`
-- Repeated failed login attempts over a short time window
+- Brute force activity originated from `10.0.0.226`
+- High frequency of failed SSH logins in a short time window
 - Eventual successful authentication
 - Immediate privileged command execution
 
-This sequence confirms **account compromise**, not a false positive.
+This sequence confirms **account compromise**, not user error.
 
 ---
 
 ## SOC Incident Grouping Logic
 
-| Signal | Alone | Correlated |
-|------|------|-----------|
+| Signal | Individually | Correlated |
+|------|-------------|------------|
 | SSH failed login | Low | Medium |
 | SSH success | Medium | High |
 | Sudo activity | Medium | Critical |
 
-When combined, these alerts form a **single security incident**.
-
 ---
 
 ## Analyst Decision
+
 ✅ Confirmed Incident  
 ❌ Not a false positive  
-🔺 Escalation required
+🔺 SOC-level escalation required
 
 ---
 
 ## Improvement Opportunity
-Implement correlation rules that trigger high-severity alerts only when:
-- Multiple failures occur AND
-- A success follows within a defined time window
+
+Implement correlation rules that raise high-severity alerts when:
+- Multiple SSH failures occur **AND**
+- A successful login follows within a defined time window
