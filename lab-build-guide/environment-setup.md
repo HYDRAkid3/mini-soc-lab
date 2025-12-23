@@ -1,4 +1,4 @@
-# 🖥️ Lab Environment Overview
+#  Lab Environment Overview
 
 This section describes the **overall lab environment**, not step-by-step commands.
 
@@ -6,7 +6,7 @@ Understanding the environment matters more than blindly installing tools.
 
 ---
 
-## 🧱 High-Level Architecture
+##  High-Level Architecture
 
 The lab consists of **three logical roles**:
 
@@ -18,7 +18,7 @@ Each role has a clear purpose and trust boundary.
 
 ---
 
-## 💻 Host System Requirements
+##  Host System Requirements
 
 Recommended minimum:
 - 16 GB RAM (8 GB may work with constraints)
@@ -31,7 +31,7 @@ Virtualization platforms:
 
 ---
 
-## 🖥️ Virtual Machines
+##  Virtual Machines
 
 | Role | Operating System | Purpose |
 |----|----|----|
@@ -41,7 +41,7 @@ Virtualization platforms:
 
 ---
 
-## 🌐 Networking Model
+##  Networking Model
 
 Recommended setup:
 - Internal / Host-only network
@@ -55,7 +55,7 @@ All attack traffic, logs, and alerts remain **inside the lab**.
 
 ---
 
-## 🧠 Key Principle
+##  Key Principle
 
 Do not rush setup.
 
