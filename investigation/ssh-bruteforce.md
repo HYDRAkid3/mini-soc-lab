@@ -50,4 +50,4 @@ This confirms brute force activity resulting in account compromise.
 ## 📸 Evidence
 ### Post-Compromise Activity
 After successful authentication, privileged activity was detected on the endpoint.
-![Post Brute Force Activity](../screenshots/wazuh_post_bruteforce_activity.png)
+![Post Brute Force Activity](../screenshots/wazuh_post_bruteforce_activity.png.png)
