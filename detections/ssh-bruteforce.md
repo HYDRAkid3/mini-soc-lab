@@ -51,6 +51,10 @@ and subsequent successful authentication activity.
 }
 ```
 ## 📸 Evidence
-### Wazuh SSH Authentication Events
-![Wazuh SSH Authentication Events](https://raw.githubusercontent.com/HYDRAkid3/mini-soc-lab/main/screenshots/wazuh_ssh_failed_events.png)
+### SSH Authentication Logs
+The following logs were recorded on the Ubuntu endpoint and collected by Wazuh.
+![Ubuntu SSH Authentication Logs](../screenshots/ubuntu_ssh_authentication_logs.png)
 
+### Wazuh SSH Authentication Failure Events
+Wazuh generated alerts for repeated SSH authentication failures.
+![Wazuh SSH Failed Events](../screenshots/wazuh_ssh_failed_events.png)
