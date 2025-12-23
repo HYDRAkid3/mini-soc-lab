@@ -56,3 +56,18 @@ This confirms a **true security incident** rather than benign activity.
 
 SSH remains a high-value target.  
 Continuous monitoring and detection tuning are required to maintain visibility while reducing alert fatigue.
+
+---
+
+## 📸 Evidence
+### Fail2Ban Service Status
+Fail2Ban was verified to be running on the endpoint.
+![Fail2Ban Service Running](../screenshots/fail2ban_service_running.png)
+
+### Enabled Fail2Ban Jails
+The SSH jail was enabled with defined thresholds.
+![Fail2Ban Enabled Jails](../screenshots/fail2ban_enabled_jails.png)
+
+### Attacker IP Blocked
+The attacker IP was automatically blocked after threshold violations.
+![Fail2Ban SSH Blocked IP](../screenshots/fail2ban_ssh_blocked_ip.png)
