@@ -94,13 +94,17 @@ This confirmed that the attack produced sufficient telemetry for SOC detection a
 ## 7. Evidence (Screenshots)
 
 ### SSH Service Discovery
+The attacker verified SSH service availability on the target system.
 ![SSH Service Discovery](../screenshots/nmap_scan_ubuntu.png)
 
 ### Brute Force Attack Execution (Hydra)
+The attacker launched a credential brute force attack using THC-Hydra.
 ![Hydra Brute Force Attack](../screenshots/hydra_bruteforce.png)
 
-### Wazuh Detected SSH Events
-![Wazuh SSH Authentication Events](../screenshots/wazuh_ssh_failed_events.png)
+### Alternate Attack Attempt – Password Spraying
+A password spraying attempt was also executed to simulate a lower-noise attack technique.
+![Hydra Password Spray Attempt](../screenshots/hydra_password_spray_attempt.png)
+
 
 ---
 
