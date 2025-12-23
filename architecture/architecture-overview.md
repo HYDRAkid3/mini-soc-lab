@@ -53,3 +53,12 @@ The goal is to simulate how a SOC operates when visibility is primarily derived 
 - Focus is placed on analyst reasoning and response validation.
 - Architecture mirrors environments with limited network visibility.
 
+---
+
+## Platform Health & Core Services
+
+This section confirms the operational status of critical SOC infrastructure components required for detection, logging, and alerting.
+
+### Wazuh Manager Status
+The Wazuh Manager service was verified to be running and operational during the attack simulation.
+![Wazuh Manager Running](../screenshots/wazuh_manager_service_running.png)
