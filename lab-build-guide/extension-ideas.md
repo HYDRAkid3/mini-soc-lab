@@ -1,38 +1,38 @@
-# 🚀 Extension Ideas & Next Steps
+#  Extension Ideas & Next Steps
 
 Once your base lab is stable, you can expand it in many directions.
 
 ---
 
-## 🔁 Detection Enhancements
+##  Detection Enhancements
 - Write custom Wazuh rules
 - Tune thresholds
 - Add correlation logic
 
 ---
 
-## 🧠 Investigation Enhancements
+##  Investigation Enhancements
 - Add process execution monitoring
 - Correlate sudo usage
 - Track persistence attempts
 
 ---
 
-## 🌐 Network Visibility
+##  Network Visibility
 - Integrate Suricata
 - Add network-based alerts
 - Compare host vs network signals
 
 ---
 
-## 🤖 Automation Ideas
+##  Automation Ideas
 - Auto-block IPs
 - Alert enrichment
 - SOAR-style response logic
 
 ---
 
-## 🎯 Advanced Scenarios
+##  Advanced Scenarios
 - Lateral movement simulation
 - Insider threat detection
 - Web application attacks
