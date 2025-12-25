@@ -1,11 +1,11 @@
 # SSH Brute Force – SOC Investigation
 
-## 🕵️ Analyst Objective
+## Analyst Objective
 Investigate SSH authentication alerts to determine whether activity represents a brute force attack or benign behavior.
 
 ---
 
-## ⏱️ Timeline Summary
+## Timeline Summary
 - Repeated SSH authentication failures detected
 - Source IP identified: `10.0.0.226`
 - Successful SSH authentication observed
@@ -13,7 +13,7 @@ Investigate SSH authentication alerts to determine whether activity represents a
 
 ---
 
-## 🔍 Investigation Steps
+## Investigation Steps
 
 1. Open Wazuh Dashboard
 2. Navigate to **Threat Hunting → Events**
@@ -26,7 +26,7 @@ Investigate SSH authentication alerts to determine whether activity represents a
 
 ---
 
-## 🚨 Findings
+## Findings
 
 - Attack originated from Kali Linux attacker VM
 - High-volume authentication failures observed
@@ -37,7 +37,7 @@ This confirms brute force activity resulting in account compromise.
 
 ---
 
-## 🛡️ Analyst Recommendations
+## Analyst Recommendations
 
 - Enforce Fail2Ban for SSH
 - Disable password-based authentication
@@ -47,7 +47,7 @@ This confirms brute force activity resulting in account compromise.
 
 ---
 
-## 📸 Evidence
+## Evidence
 ### Post-Compromise Activity
 After successful authentication, privileged activity was detected on the endpoint.
 ![Post Brute Force Activity](../screenshots/wazuh_post_bruteforce_activity.png.png)
