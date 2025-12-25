@@ -1,6 +1,6 @@
 # SSH Brute Force Detection – Wazuh
 
-## 🛡️ Detection Overview
+## Detection Overview
 
 This detection identifies repeated SSH authentication failures
 consistent with a credential brute force attack.
@@ -10,7 +10,7 @@ and detected using default Wazuh SSH authentication rules.
 
 ---
 
-## 📊 Detection Source
+## Detection Source
 
 - **Agent:** ubuntu-endpoint1
 - **Monitored File:** `/var/log/auth.log`
@@ -19,7 +19,7 @@ and detected using default Wazuh SSH authentication rules.
 
 ---
 
-## 🚨 Triggered Wazuh Rules
+## Triggered Wazuh Rules
 
 | Rule ID | Description                         | Level |
 |--------:|-------------------------------------|------:|
@@ -32,7 +32,7 @@ and subsequent successful authentication activity.
 
 ---
 
-## 📄 Sample Alert (Sanitized)
+## Sample Alert (Sanitized)
 
 ```json
 {
@@ -50,7 +50,7 @@ and subsequent successful authentication activity.
   }
 }
 ```
-## 📸 Evidence
+## Evidence
 ### SSH Authentication Logs
 The following logs were recorded on the Ubuntu endpoint and collected by Wazuh.
 ![Ubuntu SSH Authentication Logs](../screenshots/ubuntu_ssh_authentication_logs.png)
